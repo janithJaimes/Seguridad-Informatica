@@ -1,0 +1,148 @@
+/* Para todos los elementos */
+*{
+	margin:5px;
+	/*overflow:hidden;*/
+	box-sizing: border-box;
+	font-family: Helvetica;
+}
+
+/* Contenedor Padre */
+.wrapper-padre{
+	padding:5px;
+	display:flex;
+	/*background-color: rgba(179,179,179,1);*/
+	flex-flow:column nowrap;
+}
+
+	/* Elementos Hijos */
+
+	/* Encabezado */
+	.header{
+		display:flex;
+		align-items: center;
+		flex-flow:row nowrap;
+		/*background-color:rgba(255,255,255,1);*/
+				background-image: url(img/encabezado2.jpg);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-attachment: center;
+	}
+		.aside-a{
+			flex:auto;
+		}
+		.aside-a h1{
+			color:rgba(0,102,128,1);
+			/*align-self:center;*/
+			text-shadow: 2px 2px 2px #BBB;
+		}
+		.aside-a img{
+			float:right;
+		}
+
+	/* Menú lateral */
+	.subheader{
+		display:flex;
+		flex-flow:row nowrap;
+		background-color:black;
+	}
+		.nav-contenedor{
+			flex: 0 1 auto;
+			background-color: #1A8399;
+		}
+			.nav-contenedor ul{
+				padding:0;
+				margin:0;
+			}
+			.nav-contenedor li{	
+				padding:10px;		
+				list-style: none;
+				text-align: center;
+			    border-style: solid;
+			    border-width: 5px;
+				background-color:#095560;
+			}
+			.nav-contenedor li a{
+				color:#FFF;
+
+				vertical-align: middle;
+				text-decoration: none;
+			}
+			.nav-contenedor li a:hover{
+				background-color:pink;
+			}
+
+			.submenu li a{
+				cursor:pointer;
+			}
+
+		/* Slider */
+		.slider{
+			background-color: brown;
+			flex: 3 1 auto;
+		}
+			.container{
+				background-image: url(img/matrix-2503236_1280.jpg);
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-attachment: center;
+			}
+		
+		/* Secciones */
+		.section{
+			display: flex;
+			flex-flow:row nowrap;
+			background-color:red;
+		}
+			.aside-c{
+				display: flex;
+				flex-flow:row nowrap;
+			}
+				.twitter{
+					flex:1 1 auto;
+				}
+					.twitter img{
+						height:500px;
+					}
+				.row-1{
+					flex:1 1 auto;
+				}
+
+		/* Contador de Visitas */
+		.contador{
+			flex:auto;
+			background-color:gray;
+		}
+
+		/* Pie de Página */
+		.footer{
+			display: flex;
+			flex-flow:row nowrap;
+			background-color: rgba(0,88,131,1);
+		}
+			.logo img{
+				width:200px;
+			}
+
+			.licencia{
+				flex:1 1 auto;
+				background-color: skyblue;
+			}
+			.mapasitio{
+				flex:1 1 auto;
+				background-color: violet;
+			}
+
+
+
+/* Para Dispositivos */
+@media all and (max-width:800px){
+	.nav-contenedor{
+		flex-direction: column;
+	}
+
+	.section{
+		flex-direction: column;
+	}
+}
